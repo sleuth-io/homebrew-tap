@@ -5,21 +5,21 @@
 class Sx < Formula
   desc "Your team's private npm for AI assets - skills, MCP configs, commands, and more"
   homepage "https://github.com/sleuth-io/sx"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/sleuth-io/sx/releases/download/v0.11.0/sx_Darwin_x86_64.tar.gz"
-      sha256 "461d6ffdf4f99bc0a1ac4d4f947b754098300d9ad70b279fb09b2db699568bb2"
+      url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Darwin_x86_64.tar.gz"
+      sha256 "6601e0928fd2836339de6c4a1e8cefb288e93778074533fa86669a55006d018e"
 
       def install
         bin.install "sx"
       end
     end
     on_arm do
-      url "https://github.com/sleuth-io/sx/releases/download/v0.11.0/sx_Darwin_arm64.tar.gz"
-      sha256 "e4e6fee396d025ac491543a508b39e55b5a52dfadfac04df8746bb1b2c85d772"
+      url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Darwin_arm64.tar.gz"
+      sha256 "44827f30dd325d6e9206447b6192c30f2551d18217f41adb41628395722100c9"
 
       def install
         bin.install "sx"
@@ -30,8 +30,8 @@ class Sx < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sleuth-io/sx/releases/download/v0.11.0/sx_Linux_x86_64.tar.gz"
-        sha256 "413444aae85ab62021b4af3f7484fddc0ac9770acb4c0ca877762f566ed49173"
+        url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Linux_x86_64.tar.gz"
+        sha256 "c5c83b4e22e1a7ad5ce70e00100f3b9008b1d8dbd371b73e2623a084b3c1d31e"
 
         def install
           bin.install "sx"
@@ -40,8 +40,8 @@ class Sx < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sleuth-io/sx/releases/download/v0.11.0/sx_Linux_arm64.tar.gz"
-        sha256 "ca987a7e8748c1f7355e786842cf4e3c312b66bcd12c5c5aaa9e0209b8197d44"
+        url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Linux_arm64.tar.gz"
+        sha256 "9b311590ddf74ee4509344142aa6882eb91fef2d012ded9c93222f298c0c288c"
 
         def install
           bin.install "sx"
