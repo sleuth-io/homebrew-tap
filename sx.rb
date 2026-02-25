@@ -5,47 +5,41 @@
 class Sx < Formula
   desc "Your team's private npm for AI assets - skills, MCP configs, commands, and more"
   homepage "https://github.com/sleuth-io/sx"
-  version "0.11.1"
+  version "0.12.2"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Darwin_x86_64.tar.gz"
-      sha256 "6601e0928fd2836339de6c4a1e8cefb288e93778074533fa86669a55006d018e"
+    if Hardware::CPU.intel?
+      url "https://github.com/sleuth-io/sx/releases/download/v0.12.2/sx_Darwin_x86_64.tar.gz"
+      sha256 "60c8be4c20374062b263f7cc578a0ea6709659e5f0740bdb68ea532d57e4da34"
 
-      def install
+      define_method(:install) do
         bin.install "sx"
       end
     end
-    on_arm do
-      url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Darwin_arm64.tar.gz"
-      sha256 "44827f30dd325d6e9206447b6192c30f2551d18217f41adb41628395722100c9"
+    if Hardware::CPU.arm?
+      url "https://github.com/sleuth-io/sx/releases/download/v0.12.2/sx_Darwin_arm64.tar.gz"
+      sha256 "50d738c81a1a88af8f1f875244e2e4a6a6d7e3cf7f2c7bc93ef5f66cca06b0c8"
 
-      def install
+      define_method(:install) do
         bin.install "sx"
       end
     end
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Linux_x86_64.tar.gz"
-        sha256 "c5c83b4e22e1a7ad5ce70e00100f3b9008b1d8dbd371b73e2623a084b3c1d31e"
-
-        def install
-          bin.install "sx"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sleuth-io/sx/releases/download/v0.12.2/sx_Linux_x86_64.tar.gz"
+      sha256 "6f2ba7f131c15e03f80638aa334867a2ea1b5f37b52aa1838a4f22d9cccf58c1"
+      define_method(:install) do
+        bin.install "sx"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sleuth-io/sx/releases/download/v0.11.1/sx_Linux_arm64.tar.gz"
-        sha256 "9b311590ddf74ee4509344142aa6882eb91fef2d012ded9c93222f298c0c288c"
-
-        def install
-          bin.install "sx"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sleuth-io/sx/releases/download/v0.12.2/sx_Linux_arm64.tar.gz"
+      sha256 "c6f45544074317b928d5919eddc2feae3db539e963e866b44aac56006d6e1ac3"
+      define_method(:install) do
+        bin.install "sx"
       end
     end
   end
