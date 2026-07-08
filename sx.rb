@@ -5,21 +5,21 @@
 class Sx < Formula
   desc "Your team's private npm for AI assets - skills, MCP configs, commands, and more"
   homepage "https://github.com/sleuth-io/sx"
-  version "2.0.1"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sleuth-io/sx/releases/download/v2.0.1/sx_Darwin_x86_64.tar.gz"
-      sha256 "0472cd380e8329b412fa641a629f68e3e041d8c1dd2464735f97d90374cdd1de"
+      url "https://github.com/sleuth-io/sx/releases/download/v2.1.0/sx_Darwin_x86_64.tar.gz"
+      sha256 "651e319d1bb498a88d1cff6ea653850d7695bef1989593bdda709ed50b71708c"
 
       define_method(:install) do
         bin.install "sx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sleuth-io/sx/releases/download/v2.0.1/sx_Darwin_arm64.tar.gz"
-      sha256 "a53e6ae47f94e25a2466188d63889d31fc744a0e6b14914bf18699c1f42db90e"
+      url "https://github.com/sleuth-io/sx/releases/download/v2.1.0/sx_Darwin_arm64.tar.gz"
+      sha256 "409f91c71c6f40b9c81bde20be566c959d855dceb1e14403696a9f97551582cc"
 
       define_method(:install) do
         bin.install "sx"
@@ -29,15 +29,15 @@ class Sx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sleuth-io/sx/releases/download/v2.0.1/sx_Linux_x86_64.tar.gz"
-      sha256 "58f991d7d2fe09f9678914cee98defb4815d6e23a21e390c8ec90da2c3883c19"
+      url "https://github.com/sleuth-io/sx/releases/download/v2.1.0/sx_Linux_x86_64.tar.gz"
+      sha256 "273ffff454d81222182a0d68831f657f1f5fe89ec6fcf2f9929809b6180b1c7b"
       define_method(:install) do
         bin.install "sx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sleuth-io/sx/releases/download/v2.0.1/sx_Linux_arm64.tar.gz"
-      sha256 "5169bd5d15df6d7f7e8fac5498ef0bca4135c591f56f0cbdbe97cbf5bb28341d"
+      url "https://github.com/sleuth-io/sx/releases/download/v2.1.0/sx_Linux_arm64.tar.gz"
+      sha256 "67dcbcdb528b8ac3b63bb2516c51503542527592cf6356b861ce263c938cc020"
       define_method(:install) do
         bin.install "sx"
       end
